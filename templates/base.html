@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicons.icon' %}" />
+    <title>Sabina Tamang</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav id="navbar">
+       <ul>
+    <li><a href="{% url 'home' %}">Home <i class="fa-solid fa-house"></i></a></li>
+    <li><a href="{% url 'about' %}">About Me <i class="fa-solid fa-user"></i></a></li>
+    <li><a href="{% url 'projects' %}">Projects <i class="fas fa-project-diagram"></i></a></li>
+    <li>
+    <a href="{% static 'files/sabina.lama.pdf' %}" download class="cv-link">
+       Download CV <i class="fa-solid fa-file-lines"></i>
+    </a>
+</li>
+
+    <li><a href="{% url 'contact' %}">Contact <i class="fa-solid fa-rocket"></i></a></li>
+</ul>
+
+    </nav>
+{% block content %}
+
+{% endblock content %}
+<!-- Footer Section -->
+<footer id="footer">
+    <ul>
+        <li>
+            <a href="https://www.linkedin.com/in/sabinatamang38/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/sabina-tmg" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </li>
+    </ul>
+    <p>&copy; <span id="year"></span> All Rights Reserved - <span class="t-white">Sabina Tamang</span></p>
+</footer>
+
+<script>
+    // Auto update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+</body>
+</html>

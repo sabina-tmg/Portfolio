@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Projects Section -->
+    <section id="projects">
+     <h1 style="text-align: center; font-size: 2.8rem; margin-bottom: 30px; color: hsl(342, 42%, 95%);">
+  Projects
+</h1>
+
+        <div class="projects-container">
+
+            <!-- Project 1 -->
+            <div class="projects-item" tabindex="0">
+                <img src="{% static 'images/ecom1.png' %}" alt="E-commerce Website" />
+                <h1>E-commerce Website</h1>
+                <p>
+                    A fully functional online shopping platform built with Django and Bootstrap, featuring product management, cart, checkout, and payment integration.
+                </p>
+                <div class="buttons">
+                    <a href="https://github.com/sabina-tmg/ecommerce_django" target="_blank" rel="noopener noreferrer" class="btn" aria-label="GitHub">
+                      <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="btn live" aria-label="Live Link">
+                      <i class="fas fa-external-link-alt fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="projects-item" tabindex="0">
+                <img src="{% static 'images/ecom3.png' %}" alt="News Portal" />
+                <h1>News Portal</h1>
+                <p>
+                    A dynamic news website with categorized articles, search functionality, user authentication, and admin panel, built using Django.
+                </p>
+                <div class="buttons">
+                    <a href="https://github.com/sabina-tmg/News_portal" target="_blank" rel="noopener noreferrer" class="btn" aria-label="GitHub">
+                      <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="btn live" aria-label="Live Link">
+                      <i class="fas fa-external-link-alt fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="projects-item" tabindex="0">
+                <img src="{% static 'images/ecom.png' %}" alt="Student Management System" />
+                <h1>Student Management System</h1>
+                <p>
+                    A web app to manage student records, attendance, and grades with role-based access control, developed with Django and PostgreSQL.
+                </p>
+                <div class="buttons">
+                    <a href="https://github.com/sabina-tmg/student_management_system" target="_blank" rel="noopener noreferrer" class="btn" aria-label="GitHub">
+                      <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="btn live" aria-label="Live Link">
+                      <i class="fas fa-external-link-alt fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="projects-item" tabindex="0">
+                <img src="{% static 'images/ecom4.png' %}" alt="Rental Management System" />
+                <h1>Rental Management System</h1>
+                <p>
+                    A platform to manage vehicle rentals including booking, returns, and payments, built with Django and integrated with a secure backend.
+                </p>
+                <div class="buttons">
+                    <a href="https://github.com/sabina-tmg/Rental_system" target="_blank" rel="noopener noreferrer" class="btn" aria-label="GitHub">
+                      <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="btn live" aria-label="Live Link">
+                      <i class="fas fa-external-link-alt fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!----about section-->
+<section id="about" class="about-section pink-text">
+  <h1 class="about-title" style="text-align: center; font-size: 2.8rem; margin-bottom: 30px; color: hsl(340, 11%, 89%);">
+  About Me
+</h1>
+
+  <div class="about-container">
+    <div class="about-image">
+      <img src="{% static 'images/tmgs.jpg' %}" alt="Sabina Tamang" />
+    </div>
+    <div class="about-content">
+      <h2 class="name pink-text">SABINA TAMANG</h2>
+      <p class="description pink-text">
+        A passionate and dedicated Python and Django developer with a Diploma in Information Technology from Nepal Banepa Polytechnic Institute (2021). Skilled in backend web development, building scalable applications, and continuously learning new technologies to deliver efficient and maintainable code.
+      </p>
+      <div class="info-sections">
+        <div class="info-box">
+          <h3 class="section-title pink-text">EDUCATION</h3>
+          <div class="education-item pink-text">
+            <strong>Nepal Banepa Polytechnic Institute</strong><br />
+            <span class="date">2018 - 2021</span><br />
+            <span class="subtext">Diploma in Information Technology</span>
+          </div>
+        </div>
+        <div class="info-box">
+          <h3 class="section-title pink-text">SKILLS</h3>
+          <div class="skills-tags">
+            <span class="tag pink-bg">Python</span>
+            <span class="tag pink-bg">Django</span>
+            <span class="tag pink-bg">HTML</span>
+            <span class="tag pink-bg">CSS</span>
+            <span class="tag pink-bg">JavaScript</span>
+            <span class="tag pink-bg">Bootstrap</span>
+            <span class="tag pink-bg">REST APIs</span>
+            <span class="tag pink-bg">Git</span>
+          </div>
+        </div>
+        <div class="info-box">
+          <h3 class="section-title pink-text">TECH STACK</h3>
+          <div class="tech-icons">
+            <div class="tech-icon pink-border">Python</div>
+            <div class="tech-icon pink-border">Django</div>
+            <div class="tech-icon pink-border">SQLite</div>
+            <div class="tech-icon pink-border">Bootstrap 4</div>
+            <div class="tech-icon pink-border">Git</div>
+            <div class="tech-icon pink-border">Postman</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- ================= HOME SECTION ================= -->
+<section id="home" aria-label="Home Introduction">
+    <div class="home-left">
+        <div class="home-content">
+            <h6>Hi, I'm</h6>
+            <h1>Sabina Tamang</h1>
+            <h4>Python &amp; Django Developer</h4>
+
+            <div class="buttons">
+                <!-- Resume download button -->
+                <a href="{% static 'files/sabina.lama.pdf' %}" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Download Resume">Resume</a>
+                <!-- Scroll to contact section -->
+                <a href="{% url 'contact' %}" class="btn live" aria-label="Contact Me" id="openMessageBox">Let's Talk</a>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="home-right">
+        <div class="circle" id="mainImage">
+            <!-- Developer portrait -->
+            <img src="{% static 'images/img.jpg' %}" alt="Portrait of Sabina Tamang" />
+        </div>
+    </div>
+</section>
+<!-- ================= ABOUT SECTION ================= -->
+<section id="about" class="about-section pink-text">
+    <h1 class="about-title" style="text-align: center; font-size: 2.8rem; margin-bottom: 30px; color: hsl(340, 11%, 89%);">
+        About Me
+    </h1>
+
+    <div class="about-container">
+        <!-- About image -->
+        <div class="about-image">
+            <img src="{% static 'images/tmgs.jpg' %}" alt="Sabina Tamang" />
+        </div>
+
+        <!-- About text content -->
+        <div class="about-content">
+            <h2 class="name pink-text">SABINA TAMANG</h2>
+            <p class="description pink-text">
+                A passionate and dedicated Python and Django developer with a Diploma in Information Technology from Nepal Banepa Polytechnic Institute (2021). Skilled in backend web development, building scalable applications, and continuously learning new technologies to deliver efficient and maintainable code.
+            </p>
+
+            <!-- Education Info -->
+            <div class="info-sections">
+                <div class="info-box">
+                    <h3 class="section-title pink-text">EDUCATION</h3>
+                    <div class="education-item pink-text">
+                        <strong>Nepal Banepa Polytechnic Institute</strong><br />
+                        <span class="date">2018 - 2021</span><br />
+                        <span class="subtext">Diploma in Information Technology</span>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="info-box">
+                    <h3 class="section-title pink-text">SKILLS</h3>
+                    <div class="skills-tags">
+                        <span class="tag pink-bg">Python</span>
+                        <span class="tag pink-bg">Django</span>
+                        <span class="tag pink-bg">HTML</span>
+                        <span class="tag pink-bg">CSS</span>
+                        <span class="tag pink-bg">JavaScript</span>
+                        <span class="tag pink-bg">Bootstrap</span>
+                        <span class="tag pink-bg">REST APIs</span>
+                        <span class="tag pink-bg">Git</span>
+                    </div>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="info-box">
+                    <h3 class="section-title pink-text">TECH STACK</h3>
+                    <div class="tech-icons">
+                        <div class="tech-icon pink-border">Python</div>
+                        <div class="tech-icon pink-border">Django</div>
+                        <div class="tech-icon pink-border">SQLite</div>
+                        <div class="tech-icon pink-border">Bootstrap 4</div>
+                        <div class="tech-icon pink-border">Git</div>
+                        <div class="tech-icon pink-border">Postman</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROJECTS SECTION ================= -->
+<section id="projects">
+    <h1 style="text-align: center; font-size: 2.8rem; margin-bottom: 30px; color: hsl(342, 42%, 95%);">
+        Projects
+    </h1>
+
+    <div class="projects-container">
+        <!-- Each project item -->
+        <div class="projects-item" tabindex="0">
+            <img src="{% static 'images/ecom1.png' %}" alt="E-commerce Website" />
+            <h1>E-commerce Website</h1>
+            <p>A fully functional online shopping platform built with Django and Bootstrap, featuring product management, cart, checkout, and payment integration.</p>
+            <div class="buttons">
+                <a href="https://github.com/sabina-tmg/ecommerce_django" target="_blank" rel="noopener noreferrer" class="btn" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                <a href="#" target="_blank" class="btn live" aria-label="Live Link"><i class="fas fa-external-link-alt fa-lg"></i></a>
+            </div>
+        </div>
+
+        <div class="projects-item" tabindex="0">
+            <img src="{% static 'images/ecom3.png' %}" alt="News Portal" />
+            <h1>News Portal</h1>
+            <p>A dynamic news website with categorized articles, search functionality, user authentication, and admin panel, built using Django.</p>
+            <div class="buttons">
+                <a href="https://github.com/sabina-tmg/News_portal" target="_blank" rel="noopener noreferrer" class="btn" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                <a href="#" target="_blank" class="btn live" aria-label="Live Link"><i class="fas fa-external-link-alt fa-lg"></i></a>
+            </div>
+        </div>
+
+        <div class="projects-item" tabindex="0">
+            <img src="{% static 'images/ecom.png' %}" alt="Student Management System" />
+            <h1>Student Management System</h1>
+            <p>A web app to manage student records, attendance, and grades with role-based access control, developed with Django and PostgreSQL.</p>
+            <div class="buttons">
+                <a href="https://github.com/sabina-tmg/student_management_system" target="_blank" rel="noopener noreferrer" class="btn" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                <a href="#" target="_blank" class="btn live" aria-label="Live Link"><i class="fas fa-external-link-alt fa-lg"></i></a>
+            </div>
+        </div>
+
+        <div class="projects-item" tabindex="0">
+            <img src="{% static 'images/ecom4.png' %}" alt="Rental Management System" />
+            <h1>Rental Management System</h1>
+            <p>A platform to manage vehicle rentals including booking, returns, and payments, built with Django and integrated with a secure backend.</p>
+            <div class="buttons">
+                <a href="https://github.com/sabina-tmg/Rental_system" target="_blank" rel="noopener noreferrer" class="btn" aria-label="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                <a href="#" target="_blank" class="btn live" aria-label="Live Link"><i class="fas fa-external-link-alt fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section id="contact">
+    <h1>Contact Me</h1>
+
+    <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <div class="info-section">
+                <h3><i class="fas fa-envelope"></i> Email</h3>
+                <p>syangtansabina8@gmail.com</p>
+            </div>
+            <div class="info-section">
+                <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                <p>Kathmandu, Nepal</p>
+            </div>
+            <div class="info-section">
+                <h3><i class="fas fa-phone"></i> Phone</h3>
+                <p>+977 98XXXXXXXXX</p>
+            </div>
+           
+            <div class="availability-section-box">
+                <h3>Availability</h3>
+                <p>Always ready to connect. Freelance and collaboration welcome.</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form" id="contactForm">
+            {% if messages %}
+                <ul class="messages" id="messages-list">
+                    {% for message in messages %}
+                        <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <h6 class="send-message-title">Send a Message</h6>
+                <!-- Name Field -->
+                <div class="form-group">
+                    {{ form.name }}
+                    {% for error in form.name.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    {{ form.email }}
+                    {% for error in form.email.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Phone Number Field -->
+                <div class="form-group">
+                    {{ form.number }}
+                    {% for error in form.number.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <!-- Message Field -->
+                <div class="form-group">
+                    {{ form.content }}
+                    {% for error in form.content.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <button type="submit" class="btn submit-btn">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

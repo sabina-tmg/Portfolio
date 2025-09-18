@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section id="contact">
+    <h1>Contact Me</h1>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+
+            <div class="info-section">
+                <h3><i class="fas fa-envelope"></i> Email</h3>
+                <p>syangtansabina8@gmail.com</p>
+            </div>
+
+            <div class="info-section">
+                <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                <p>Kathmandu, Nepal</p>
+            </div>
+
+            <div class="info-section">
+                <h3><i class="fas fa-phone"></i> Phone</h3>
+                <p>+977 98XXXXXXXXX</p>
+            </div>
+
+            <div class="info-section">
+                <h3><i class="fas fa-users"></i> Connect with Me</h3>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="availability-section-box">
+                <h3>Availability</h3>
+                <p>Always ready to connect. Freelance and collaboration welcome</p>
+            </div>
+        </div>
+
+        <div class="form" id="contactForm">
+                 {% if messages %}
+  <ul class="messages" id="messages-list">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+            <form method="post" novalidate>
+                {% csrf_token %}
+                  <h6 class="send-message-title">Send a Message</h6>
+
+                <div class="form-group">
+                    {{ form.name }}
+                    {% for error in form.name.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.email }}
+                    {% for error in form.email.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.number }}
+                    {% for error in form.number.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.content }}
+                    {% for error in form.content.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <button type="submit" class="btn submit-btn">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock content %}
